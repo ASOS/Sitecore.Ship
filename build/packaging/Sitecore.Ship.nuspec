@@ -20,12 +20,12 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="..\..\artifacts\Build\lib\net45\Sitecore.Ship.dll" target="lib\net45" />
-    <file src="..\..\artifacts\Build\lib\net45\Sitecore.Ship.pdb" target="lib\net45" />
-    <file src="..\..\artifacts\Build\lib\net45\Sitecore.Ship.Core.dll" target="lib\net45" />
-    <file src="..\..\artifacts\Build\lib\net45\Sitecore.Ship.Core.pdb" target="lib\net45" />
-    <file src="..\..\artifacts\Build\lib\net45\Sitecore.Ship.Infrastructure.dll" target="lib\net45" />
-    <file src="..\..\artifacts\Build\lib\net45\Sitecore.Ship.Infrastructure.pdb" target="lib\net45" />
+    <file src="..\..\artifacts\Build\lib\net45\Sitecore.Ship.dll" target="lib\net462" />
+    <file src="..\..\artifacts\Build\lib\net45\Sitecore.Ship.pdb" target="lib\net462" />
+    <file src="..\..\artifacts\Build\lib\net45\Sitecore.Ship.Core.dll" target="lib\net462" />
+    <file src="..\..\artifacts\Build\lib\net45\Sitecore.Ship.Core.pdb" target="lib\net462" />
+    <file src="..\..\artifacts\Build\lib\net45\Sitecore.Ship.Infrastructure.dll" target="lib\net462" />
+    <file src="..\..\artifacts\Build\lib\net45\Sitecore.Ship.Infrastructure.pdb" target="lib\net462" />
     
     <file src="..\..\src\Sitecore.Ship\content\**\*" target="content" />
   </files>
