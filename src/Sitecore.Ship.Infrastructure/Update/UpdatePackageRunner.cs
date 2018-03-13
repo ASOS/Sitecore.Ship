@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using Alienlab.Zip;
 using Sitecore.ContentSearch.Utilities;
 using Sitecore.IO;
@@ -198,7 +199,31 @@ namespace Sitecore.Ship.Infrastructure.Update
 
             using (FileStream fileStream = File.Create(path))
             {
-                new XmlEntrySerializer().Serialize(entries, fileStream);
+                XmlEntrySerializer xmlEntrySerializer = new XmlEntrySerializer();
+
+                //For some reason, this has changed in Sitecore 9. We are using reflection to get it because the fileStream parameter can be a FileStream or Stream
+                //xmlEntrySerializer.Serialize(logMessages, fileStream);
+                Type serializerType = xmlEntrySerializer.GetType();
+
+                MethodInfo serializeMethod = serializerType.GetMethod("Serialize",
+                    BindingFlags.Public | BindingFlags.Instance,
+                    null,
+                    new Type[] { entries.GetType(), typeof(FileStream) },
+                    null);
+
+                if (serializeMethod == null)
+                {
+                    serializeMethod = serializerType.GetMethod("Serialize",
+                        BindingFlags.Public | BindingFlags.Instance,
+                        null,
+                        new Type[] { entries.GetType(), typeof(Stream) },
+                        null);
+                }
+
+                if (serializeMethod != null)
+                {
+                    serializeMethod.Invoke(xmlEntrySerializer, new object[] { entries, fileStream });
+                }
             }
         }
     }
