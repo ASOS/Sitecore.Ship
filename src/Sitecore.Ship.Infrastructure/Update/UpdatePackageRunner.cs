@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using Alienlab.Zip;
+using Sitecore.ContentSearch.Maintenance;
 using Sitecore.ContentSearch.Utilities;
 using Sitecore.IO;
 using Sitecore.SecurityModel;
@@ -41,7 +42,7 @@ namespace Sitecore.Ship.Infrastructure.Update
             {
                 if (disableIndexing)
                 {
-                    Sitecore.Configuration.Settings.Indexing.Enabled = false;
+                    IndexCustodian.PauseIndexing();
                 }
 
                 var installationInfo = GetInstallationInfo(packagePath);
@@ -133,7 +134,7 @@ namespace Sitecore.Ship.Infrastructure.Update
                 {
                     if (disableIndexing)
                     {
-                        Sitecore.Configuration.Settings.Indexing.Enabled = true;
+                        IndexCustodian.ResumeIndexing();
                     }
 
                     manifestReporter.Dispose();
