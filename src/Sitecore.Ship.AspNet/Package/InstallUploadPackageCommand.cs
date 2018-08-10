@@ -3,8 +3,7 @@ using System.Configuration;
 using System.Net;
 using System.Web;
 using System.Web.Configuration;
-using System.Web.Helpers;
-
+using Newtonsoft.Json;
 using Sitecore.Ship.Core;
 using Sitecore.Ship.Core.Contracts;
 using Sitecore.Ship.Core.Domain;
@@ -90,7 +89,7 @@ namespace Sitecore.Ship.AspNet.Package
                         }
                     }
 
-                    var json = Json.Encode(new { manifest.ManifestReport });
+                    var json = JsonConvert.SerializeObject(new { manifest.ManifestReport });
                     JsonResponse(json, manifest.ManifestReport.ErrorOccured, manifest.ManifestReport.WarningOccured, context);
 
                     context.Response.AddHeader("Location", ShipServiceUrl.PackageLatestVersion);                       

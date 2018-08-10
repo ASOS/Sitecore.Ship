@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Net;
 using System.Web;
-using System.Web.Helpers;
-
+using Newtonsoft.Json;
 using Sitecore.Ship.Core.Contracts;
 using Sitecore.Ship.Core.Domain;
 using Sitecore.Ship.Infrastructure;
@@ -30,7 +29,7 @@ namespace Sitecore.Ship.AspNet.Publish
 
                 var date = _publishService.GetLastCompletedRun(completedRequest);
 
-                var json = Json.Encode(new { date });
+                var json = JsonConvert.SerializeObject(new { date });
                 JsonResponse(json, HttpStatusCode.Accepted, context);
             }
             else if (Successor != null)

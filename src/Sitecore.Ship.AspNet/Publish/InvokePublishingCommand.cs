@@ -3,8 +3,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
-using System.Web.Helpers;
-
+using Newtonsoft.Json;
 using Sitecore.Ship.Core.Contracts;
 using Sitecore.Ship.Core.Domain;
 using Sitecore.Ship.Infrastructure;
@@ -45,7 +44,7 @@ namespace Sitecore.Ship.AspNet.Publish
 						}
 						else
 						{
-							var itemsToPublish = Json.Decode<ItemsToPublish>(values);
+							var itemsToPublish = JsonConvert.DeserializeObject<ItemsToPublish>(values);
 
 							if (itemsToPublish == null)
 							{
@@ -54,7 +53,7 @@ namespace Sitecore.Ship.AspNet.Publish
 							else
 							{
 								_publishService.Run(itemsToPublish);
-								var json = Json.Encode(new { date });
+								var json = JsonConvert.SerializeObject(new { date });
 
 								JsonResponse(json, HttpStatusCode.Accepted, context);
 							}							
@@ -64,7 +63,7 @@ namespace Sitecore.Ship.AspNet.Publish
 				else
 				{
 					_publishService.Run(publishParameters);
-					var json = Json.Encode(new { date });
+					var json = JsonConvert.SerializeObject(new { date });
 
 					JsonResponse(json, HttpStatusCode.Accepted, context);
 				}
