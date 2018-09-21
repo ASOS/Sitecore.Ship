@@ -15,5 +15,18 @@ namespace Sitecore.Ship
 
             return inputValue.Split(new[] { ',' }).Select(x => x.Trim()).ToArray();
         }
+
+        public static bool ToBool(this string inputValue, bool defaultValue)
+        {
+            if (!string.IsNullOrWhiteSpace(inputValue))
+            {
+                bool retValue;
+                if (bool.TryParse(inputValue, out retValue))
+                {
+                    return retValue;
+                }
+            }
+            return defaultValue;
+        }
     }
 }
