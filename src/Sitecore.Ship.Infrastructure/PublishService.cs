@@ -28,6 +28,7 @@ namespace Sitecore.Ship.Infrastructure
             if (item != null)
             {
                 PublishManager.AddToPublishQueue(item, ItemUpdateType.Saved, DateTime.UtcNow);
+                PublishManager.AddToPublishQueue(item, ItemUpdateType.Saved, true);
             }
         }
 
