@@ -9,5 +9,6 @@ namespace Sitecore.Ship.Core.Contracts
         DateTime GetLastCompletedRun(PublishLastCompleted completeParameters);
         void Run(ItemsToPublish itemsToPublish);
         void AddToPublishQueue(Guid itemId);
+        void AddToPublishQueue(Guid itemId, int version, string language);
     }
 }

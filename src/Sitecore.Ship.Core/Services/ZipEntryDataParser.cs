@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Linq;
 using Sitecore.Ship.Core.Domain;
 
 namespace Sitecore.Ship.Core.Services
@@ -21,15 +21,21 @@ namespace Sitecore.Ship.Core.Services
 
             if (dataKey.EndsWith("/xml", StringComparison.InvariantCultureIgnoreCase))
             {
-                var elements = dataKey.Split(new[] { "/{" }, 2, StringSplitOptions.None);
+                var elements = dataKey.Split(new[] { "/" }, StringSplitOptions.None).Reverse().ToArray();
                 // fix - support XML folders
-                if (elements.Length > 1)
+                if (elements.Length > 4)
                 {
-                    return new PackageManifestEntry
+                    var guid = Guid.Empty;
+                    if (Guid.TryParse(elements[3].Trim('{', '}'), out guid))
                     {
-                        ID = new Guid(elements[1].Split(new[] { '}' })[0]),
-                        Path = elements[0]
-                    };
+                        return new PackageManifestEntry
+                        {
+                            ID = guid,
+                            Path = string.Join("/", elements.Skip(4).Reverse()),
+                            Language = elements[2],
+                            Version = ParseVersion(elements[1])
+                        };
+                    }
                 }
             }
 
@@ -40,6 +46,16 @@ namespace Sitecore.Ship.Core.Services
             }
 
             return new PackageManifestEntryNotFound();
+        }
+
+        private static int ParseVersion(string version)
+        {
+            int parsedVersion;
+            if (int.TryParse(version, out parsedVersion))
+            {
+                return parsedVersion;
+            }
+            return 0;
         }
     }
 }
