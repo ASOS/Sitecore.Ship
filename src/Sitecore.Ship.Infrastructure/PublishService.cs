@@ -6,18 +6,30 @@ using Sitecore.Data;
 using Sitecore.Data.Items;
 using Sitecore.Data.Managers;
 using Sitecore.Diagnostics;
+using Sitecore.Globalization;
 using Sitecore.Publishing;
 using Sitecore.Ship.Core.Contracts;
 using Sitecore.Ship.Core.Domain;
+using Version = Sitecore.Data.Version;
 
 namespace Sitecore.Ship.Infrastructure
 {
     public class PublishService : IPublishService
     {
+        private static Database _master = Sitecore.Configuration.Factory.GetDatabase("master");
         public void AddToPublishQueue(Guid itemId)
         {
-            var master = Sitecore.Configuration.Factory.GetDatabase("master");
-            Sitecore.Publishing.PublishManager.AddToPublishQueue(master, new ID(itemId), ItemUpdateType.Saved, DateTime.UtcNow);
+            PublishManager.AddToPublishQueue(_master, new ID(itemId), ItemUpdateType.Saved, DateTime.UtcNow);
+        }
+
+        public void AddToPublishQueue(Guid itemId, int version, string language)
+        {
+            var item = _master.GetItem(new ID(itemId), Language.Parse(language), Version.Parse(version));
+            if (item != null)
+            {
+                PublishManager.AddToPublishQueue(item, ItemUpdateType.Saved, DateTime.UtcNow);
+                PublishManager.AddToPublishQueue(item, ItemUpdateType.Saved, true);
+            }
         }
 
         public void Run(ItemsToPublish itemsToPublish)

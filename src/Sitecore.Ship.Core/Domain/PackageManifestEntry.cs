@@ -6,6 +6,8 @@ namespace Sitecore.Ship.Core.Domain
     {
         public Guid? ID { get; set; }
         public string Path { get; set; }
+        public int Version { get; set; }
+        public string Language { get; set; }
     }
 
     public class FileManifestEntry : PackageManifestEntry

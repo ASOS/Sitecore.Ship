@@ -50,7 +50,14 @@ namespace Sitecore.Ship.AspNet.Package
                         {
                             if (entry.ID.HasValue)
                             {
-                                _publishService.AddToPublishQueue(entry.ID.Value);
+                                if (entry.Version > 0)
+                                {
+                                    _publishService.AddToPublishQueue(entry.ID.Value, entry.Version, entry.Language);
+                                }
+                                else
+                                {
+                                    _publishService.AddToPublishQueue(entry.ID.Value);
+                                }
                             }
                         }
                     }
