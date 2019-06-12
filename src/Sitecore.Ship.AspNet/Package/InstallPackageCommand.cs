@@ -9,6 +9,7 @@ using Sitecore.Ship.Core.Services;
 using Sitecore.Ship.Infrastructure;
 using Sitecore.Ship.Infrastructure.Configuration;
 using Sitecore.Ship.Infrastructure.DataAccess;
+using Sitecore.Ship.Infrastructure.Diagnostics;
 using Sitecore.Ship.Infrastructure.Install;
 using Sitecore.Ship.Infrastructure.Update;
 using Sitecore.Ship.Infrastructure.Web;
@@ -20,19 +21,21 @@ namespace Sitecore.Ship.AspNet.Package
         private readonly IPackageRepository _repository;
         private readonly IInstallationRecorder _installationRecorder;
         private readonly IPublishService _publishService;
+        private readonly ILog _logger;
 
-        public InstallPackageCommand(IPackageRepository repository, IInstallationRecorder installationRecorder, IPublishService publishService)
+        public InstallPackageCommand(IPackageRepository repository, IInstallationRecorder installationRecorder, IPublishService publishService, ILog logger)
         {
             _repository = repository;
             _installationRecorder = installationRecorder;
             _publishService = publishService;
+            _logger = logger;
         }
 
-        public InstallPackageCommand() 
+        public InstallPackageCommand()
             : this(new PackageRepository(new UpdatePackageRunner(new PackageManifestReader())),
                    new InstallationRecorder(new PackageHistoryRepository(), new PackageInstallationConfigurationProvider().Settings),
-                    new PublishService())
-        {           
+                    new PublishService(), new Logger())
+        {
         }
 
         public override void HandleRequest(HttpContextBase context)
@@ -48,6 +51,8 @@ namespace Sitecore.Ship.AspNet.Package
                         _installationRecorder.RecordInstall(package.Path, DateTime.Now);
                         foreach (var entry in manifest.Entries)
                         {
+                            _logger.Write(string.Format("Ship: Adding {0} to publish queue", entry.ID));
+
                             if (entry.ID.HasValue)
                             {
                                 if (entry.Version > 0)
@@ -59,6 +64,8 @@ namespace Sitecore.Ship.AspNet.Package
                                     _publishService.AddToPublishQueue(entry.ID.Value);
                                 }
                             }
+
+                            _logger.Write(string.Format("Ship: {0} successfully added to publish queue", entry.ID));
                         }
                     }
 
@@ -69,7 +76,7 @@ namespace Sitecore.Ship.AspNet.Package
                 }
                 catch (NotFoundException)
                 {
-                    context.Response.StatusCode = (int) HttpStatusCode.NotFound;
+                    context.Response.StatusCode = (int)HttpStatusCode.NotFound;
                 }
             }
             else if (Successor != null)
@@ -80,7 +87,7 @@ namespace Sitecore.Ship.AspNet.Package
 
         private static bool CanHandle(HttpContextBase context)
         {
-            return context.Request.Url != null && 
+            return context.Request.Url != null &&
                    context.Request.Url.PathAndQuery.EndsWith("/services/package/install", StringComparison.InvariantCultureIgnoreCase) &&
                    context.Request.HttpMethod == "POST" && context.Response.StatusCode != (int)HttpStatusCode.Unauthorized;
         }
