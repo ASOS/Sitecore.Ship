@@ -62,8 +62,12 @@ namespace Sitecore.Ship.AspNet.Package
                         }
                     }
 
-                    var json = JsonConvert.SerializeObject(new { manifest.ManifestReport });
-                    JsonResponse(json, manifest.ManifestReport.ErrorOccured, manifest.ManifestReport.WarningOccured, context);
+                    if (package.ReturnManifest)
+                    {
+                        var json = JsonConvert.SerializeObject(new {manifest.ManifestReport});
+                        JsonResponse(json, manifest.ManifestReport.ErrorOccured, manifest.ManifestReport.WarningOccured,
+                            context);
+                    }
 
                     context.Response.AddHeader("Location", ShipServiceUrl.PackageLatestVersion);
                 }
@@ -94,6 +98,7 @@ namespace Sitecore.Ship.AspNet.Package
                 EnableSecurityInstall = ParseBoolean(request.Form["EnableSecurityInstall"]),
                 AnalyzeOnly = ParseBoolean(request.Form["AnalyzeOnly"]),
                 SummeryOnly = ParseBoolean(request.Form["SummeryOnly"]),
+                ReturnManifest = ParseBoolean(request.Form["ReturnManifest"]),
                 Version = request.Form["Version"]
             };
         }
