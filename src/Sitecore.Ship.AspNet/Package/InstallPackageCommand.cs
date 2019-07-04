@@ -62,13 +62,8 @@ namespace Sitecore.Ship.AspNet.Package
                         }
                     }
 
-                    if (package.ReturnManifest)
-                    {
-                        var json = JsonConvert.SerializeObject(new {manifest.ManifestReport});
-                        JsonResponse(json, manifest.ManifestReport.ErrorOccured, manifest.ManifestReport.WarningOccured,
-                            context);
-                    }
-
+                    var json = package.ReturnManifest ? JsonConvert.SerializeObject(new { manifest.ManifestReport }): "{}";
+                    JsonResponse(json, manifest.ManifestReport.ErrorOccured, manifest.ManifestReport.WarningOccured, context);
                     context.Response.AddHeader("Location", ShipServiceUrl.PackageLatestVersion);
                 }
                 catch (NotFoundException)
