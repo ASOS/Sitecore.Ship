@@ -36,7 +36,7 @@ namespace Sitecore.Ship.AspNet
         {
             if (!_authoriser.IsAllowed())
             {
-                context.Response.StatusCode = (int) HttpStatusCode.Unauthorized;
+                context.Response.StatusCode = (int) HttpStatusCode.NotFound;
                 return;
             }
 
