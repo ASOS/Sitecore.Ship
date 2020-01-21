@@ -32,10 +32,10 @@
   <PropertyGroup>
 
     <!-- Provide defaults for build Environment variables - documented in build\readme.md -->
-    <MajorVersion Condition="$(MajorVersion) == ''">0</MajorVersion>
+    <MajorVersion Condition="$(MajorVersion) == ''">1</MajorVersion>
     <MinorVersion Condition="$(MinorVersion) == ''">0</MinorVersion>
     <PatchVersion Condition="$(PatchVersion) == ''">0</PatchVersion>
-    <Revision Condition="$(Revision) == ''">0000</Revision>
+    <Revision Condition="$(Revision) == ''">0001</Revision>
     <Revision Condition="$(SHA) == ''">0000000</Revision>
     <PRERELEASE Condition="$(PRERELEASE) == ''">true</PRERELEASE>
     
@@ -43,7 +43,7 @@
     <Configuration Condition="$(Configuration) == ''">Release</Configuration>
     
     <!-- Define build version values from Environment variables -->
-    <BuildNumber>-r$(Revision)</BuildNumber>
+    <BuildNumber>-response$(Revision)</BuildNumber>
     <SHA Condition="'$(SHA.Length)' > 7" >$(SHA.Substring(0,7))</SHA>
     <CommitSHA>-$(SHA)</CommitSHA>
     <MajorMinorPatch>$(MajorVersion).$(MinorVersion).$(PatchVersion)</MajorMinorPatch>

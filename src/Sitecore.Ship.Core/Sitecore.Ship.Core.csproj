@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Sitecore.Ship.Core</RootNamespace>
     <AssemblyName>Sitecore.Ship.Core</AssemblyName>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -37,144 +37,132 @@
     <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.Abstractions, Version=11.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.0.180604.1\lib\net462\Sitecore.Abstractions.dll</HintPath>
+    <Reference Include="Sitecore.Analytics, Version=14.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.3.0.98\lib\net462\Sitecore.Analytics.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.Analytics, Version=11.18.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.0.180604.1\lib\net462\Sitecore.Analytics.dll</HintPath>
+    <Reference Include="Sitecore.Apps.Loader, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.3.0.98\lib\net462\Sitecore.Apps.Loader.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.Apps.Loader, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.0.180604.1\lib\net462\Sitecore.Apps.Loader.dll</HintPath>
+    <Reference Include="Sitecore.Buckets, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.3.0.98\lib\net462\Sitecore.Buckets.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.Buckets, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.0.180604.1\lib\net462\Sitecore.Buckets.dll</HintPath>
+    <Reference Include="Sitecore.Buckets.Client, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.3.0.98\lib\net462\Sitecore.Buckets.Client.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.Buckets.Client, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.0.180604.1\lib\net462\Sitecore.Buckets.Client.dll</HintPath>
+    <Reference Include="Sitecore.Client, Version=14.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.3.0.98\lib\net462\Sitecore.Client.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.Client, Version=11.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.0.180604.1\lib\net462\Sitecore.Client.dll</HintPath>
+    <Reference Include="Sitecore.Content.Services, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.3.0.98\lib\net462\Sitecore.Content.Services.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.Content.Services, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.0.180604.1\lib\net462\Sitecore.Content.Services.dll</HintPath>
+    <Reference Include="Sitecore.ContentSearch, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.3.0.98\lib\net462\Sitecore.ContentSearch.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.ContentSearch, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.0.180604.1\lib\net462\Sitecore.ContentSearch.dll</HintPath>
+    <Reference Include="Sitecore.ContentSearch.Client, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.3.0.98\lib\net462\Sitecore.ContentSearch.Client.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.ContentSearch.Client, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.0.180604.1\lib\net462\Sitecore.ContentSearch.Client.dll</HintPath>
+    <Reference Include="Sitecore.ContentSearch.ContentExtraction, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.3.0.98\lib\net462\Sitecore.ContentSearch.ContentExtraction.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.ContentSearch.Data, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.0.180604.1\lib\net462\Sitecore.ContentSearch.Data.dll</HintPath>
+    <Reference Include="Sitecore.ContentSearch.Data, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.3.0.98\lib\net462\Sitecore.ContentSearch.Data.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.ContentSearch.Linq, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.0.180604.1\lib\net462\Sitecore.ContentSearch.Linq.dll</HintPath>
+    <Reference Include="Sitecore.ContentSearch.Linq, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.3.0.98\lib\net462\Sitecore.ContentSearch.Linq.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.ContentSearch.Linq.Lucene, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.0.180604.1\lib\net462\Sitecore.ContentSearch.Linq.Lucene.dll</HintPath>
+    <Reference Include="Sitecore.ContentSearch.Linq.Solr, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.3.0.98\lib\net462\Sitecore.ContentSearch.Linq.Solr.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.ContentSearch.Linq.Solr, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.0.180604.1\lib\net462\Sitecore.ContentSearch.Linq.Solr.dll</HintPath>
+    <Reference Include="Sitecore.ContentSearch.SolrNetExtension, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.3.0.98\lib\net462\Sitecore.ContentSearch.SolrNetExtension.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.ContentSearch.LuceneProvider, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.0.180604.1\lib\net462\Sitecore.ContentSearch.LuceneProvider.dll</HintPath>
+    <Reference Include="Sitecore.ContentSearch.SolrProvider, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.3.0.98\lib\net462\Sitecore.ContentSearch.SolrProvider.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.ContentSearch.SolrNetExtension, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.0.180604.1\lib\net462\Sitecore.ContentSearch.SolrNetExtension.dll</HintPath>
+    <Reference Include="Sitecore.ContentTesting, Version=15.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.3.0.98\lib\net462\Sitecore.ContentTesting.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.ContentSearch.SolrProvider, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.0.180604.1\lib\net462\Sitecore.ContentSearch.SolrProvider.dll</HintPath>
+    <Reference Include="Sitecore.ContentTesting.Intelligence, Version=15.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.3.0.98\lib\net462\Sitecore.ContentTesting.Intelligence.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.ContentTesting, Version=12.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.0.180604.1\lib\net462\Sitecore.ContentTesting.dll</HintPath>
+    <Reference Include="Sitecore.ContentTesting.Model, Version=15.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.3.0.98\lib\net462\Sitecore.ContentTesting.Model.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.ContentTesting.Intelligence, Version=12.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.0.180604.1\lib\net462\Sitecore.ContentTesting.Intelligence.dll</HintPath>
+    <Reference Include="Sitecore.ContentTesting.Mvc, Version=15.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.3.0.98\lib\net462\Sitecore.ContentTesting.Mvc.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.ContentTesting.Model, Version=12.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.0.180604.1\lib\net462\Sitecore.ContentTesting.Model.dll</HintPath>
+    <Reference Include="Sitecore.ExperienceEditor, Version=7.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.3.0.98\lib\net462\Sitecore.ExperienceEditor.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.ContentTesting.Mvc, Version=12.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.0.180604.1\lib\net462\Sitecore.ContentTesting.Mvc.dll</HintPath>
+    <Reference Include="Sitecore.ExperienceEditor.Speak, Version=7.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.3.0.98\lib\net462\Sitecore.ExperienceEditor.Speak.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.ExperienceEditor, Version=4.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.0.180604.1\lib\net462\Sitecore.ExperienceEditor.dll</HintPath>
+    <Reference Include="Sitecore.ExperienceEditor.Speak.Ribbon, Version=7.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.3.0.98\lib\net462\Sitecore.ExperienceEditor.Speak.Ribbon.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.ExperienceEditor.Speak, Version=4.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.0.180604.1\lib\net462\Sitecore.ExperienceEditor.Speak.dll</HintPath>
+    <Reference Include="Sitecore.ItemWebApi, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.3.0.98\lib\net462\Sitecore.ItemWebApi.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.ExperienceEditor.Speak.Ribbon, Version=4.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.0.180604.1\lib\net462\Sitecore.ExperienceEditor.Speak.Ribbon.dll</HintPath>
+    <Reference Include="Sitecore.Kernel, Version=14.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.3.0.98\lib\net462\Sitecore.Kernel.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.ItemWebApi, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.0.180604.1\lib\net462\Sitecore.ItemWebApi.dll</HintPath>
+    <Reference Include="Sitecore.Logging, Version=13.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.3.0.98\lib\net462\Sitecore.Logging.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.Kernel, Version=11.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.0.180604.1\lib\net462\Sitecore.Kernel.dll</HintPath>
+    <Reference Include="Sitecore.Logging.Client, Version=13.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.3.0.98\lib\net462\Sitecore.Logging.Client.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.Logging, Version=11.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.0.180604.1\lib\net462\Sitecore.Logging.dll</HintPath>
+    <Reference Include="Sitecore.Mvc, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.3.0.98\lib\net462\Sitecore.Mvc.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.Logging.Client, Version=11.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.0.180604.1\lib\net462\Sitecore.Logging.Client.dll</HintPath>
+    <Reference Include="Sitecore.Mvc.Analytics, Version=14.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.3.0.98\lib\net462\Sitecore.Mvc.Analytics.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.Mvc, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.0.180604.1\lib\net462\Sitecore.Mvc.dll</HintPath>
+    <Reference Include="Sitecore.Mvc.DeviceSimulator, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.3.0.98\lib\net462\Sitecore.Mvc.DeviceSimulator.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.Mvc.Analytics, Version=11.6.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.0.180604.1\lib\net462\Sitecore.Mvc.Analytics.dll</HintPath>
+    <Reference Include="Sitecore.Mvc.ExperienceEditor, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.3.0.98\lib\net462\Sitecore.Mvc.ExperienceEditor.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.Mvc.DeviceSimulator, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.0.180604.1\lib\net462\Sitecore.Mvc.DeviceSimulator.dll</HintPath>
+    <Reference Include="Sitecore.Nexus, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.3.0.98\lib\net462\Sitecore.Nexus.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.Mvc.ExperienceEditor, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.0.180604.1\lib\net462\Sitecore.Mvc.ExperienceEditor.dll</HintPath>
+    <Reference Include="Sitecore.Nexus.Licensing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=9de34fe2109de40c, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.3.0.98\lib\net462\Sitecore.Nexus.Licensing.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.Nexus, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.0.180604.1\lib\net462\Sitecore.Nexus.dll</HintPath>
+    <Reference Include="Sitecore.Services.Client, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.3.0.98\lib\net462\Sitecore.Services.Client.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.NVelocity, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.0.180604.1\lib\net462\Sitecore.NVelocity.dll</HintPath>
+    <Reference Include="Sitecore.Services.Core, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.3.0.98\lib\net462\Sitecore.Services.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.Publishing.WebDeploy, Version=11.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.0.180604.1\lib\net462\Sitecore.Publishing.WebDeploy.dll</HintPath>
+    <Reference Include="Sitecore.Services.Infrastructure, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.3.0.98\lib\net462\Sitecore.Services.Infrastructure.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.Services.Client, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.0.180604.1\lib\net462\Sitecore.Services.Client.dll</HintPath>
+    <Reference Include="Sitecore.Services.Infrastructure.Sitecore, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.3.0.98\lib\net462\Sitecore.Services.Infrastructure.Sitecore.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.Services.Core, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.0.180604.1\lib\net462\Sitecore.Services.Core.dll</HintPath>
+    <Reference Include="Sitecore.Speak.Web, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.3.0.98\lib\net462\Sitecore.Speak.Web.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.Services.Infrastructure, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.0.180604.1\lib\net462\Sitecore.Services.Infrastructure.dll</HintPath>
+    <Reference Include="Sitecore.Update, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.3.0.98\lib\net462\Sitecore.Update.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.Services.Infrastructure.Sitecore, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.0.180604.1\lib\net462\Sitecore.Services.Infrastructure.Sitecore.dll</HintPath>
+    <Reference Include="Sitecore.Web, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.3.0.98\lib\net462\Sitecore.Web.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.Speak.Web, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.0.180604.1\lib\net462\Sitecore.Speak.Web.dll</HintPath>
-    </Reference>
-    <Reference Include="Sitecore.Update, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.0.180604.1\lib\net462\Sitecore.Update.dll</HintPath>
-    </Reference>
-    <Reference Include="Sitecore.Web, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.0.180604.1\lib\net462\Sitecore.Web.dll</HintPath>
-    </Reference>
-    <Reference Include="Sitecore.Zip, Version=11.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.0.180604.1\lib\net462\Sitecore.Zip.dll</HintPath>
+    <Reference Include="Sitecore.Zip, Version=12.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.3.0.98\lib\net462\Sitecore.Zip.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ASOS.Content.Sitecore.Binaries.9.0.180604.1\lib\net462\System.Web.Mvc.dll</HintPath>
-    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-	<Reference Include="System.Runtime" />
+    <Reference Include="System.Runtime" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\Common\CommonAssemblyInfo.cs">

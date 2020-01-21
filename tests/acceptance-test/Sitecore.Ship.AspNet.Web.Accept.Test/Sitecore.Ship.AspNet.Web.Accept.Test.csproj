@@ -14,7 +14,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Sitecore.Ship.AspNet.Web.Accept.Test</RootNamespace>
     <AssemblyName>Sitecore.Ship.AspNet.Web.Accept.Test</AssemblyName>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -63,8 +63,8 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime" />
     <Reference Include="System.Xml.Linq" />
-	<Reference Include="System.Runtime" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config">
